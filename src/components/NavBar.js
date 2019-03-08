@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { Route } from 'react-router-dom'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
+import Home from './Home'
 
 function TabContainer(props) {
     return (
@@ -41,7 +43,11 @@ class NavBar extends Component {
 
                     </Tabs>
                 </AppBar>
-                {value === 0 && <TabContainer>Page One</TabContainer>}
+                {value === 0 && 
+                    <TabContainer>
+                        <Route path='/' exact component={Home}/>
+                    </TabContainer>
+                }
                 {value === 1 && <TabContainer>Page Two</TabContainer>}
                 {value === 2 && <TabContainer>Page Three</TabContainer>}
                 {value === 3 && <TabContainer>Page Three</TabContainer>}
