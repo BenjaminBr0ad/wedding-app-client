@@ -2,14 +2,54 @@
     font-family: 'Srisakdi', cursive;
 }
 
+.navlink {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #c0c1c4;
+}
+
+.navlink:hover {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #d1a2ef;
+    text-decoration: none;
+}
+
 
 /* Desktops & Laptops */
 @media only screen  and (min-width : 1224px) {
-
     .header-text {
         font-size: 5rem;
     }
+    
+    .navlink-arrow {
+        position: relative;
+        background:#f8f9fa;
+        border: 4px solid #f8f9fa;
+        color: #d1a2ef
+    }
 
+    .navlink-arrow:after, .navlink-arrow:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .navlink-arrow:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: #f8f9fa;
+        border-width: 30px;
+        margin-left: -30px;
+    }
+    .navlink-arrow:before {
+        border-color: rgba(194, 225, 245, 0);
+        border-top-color: #f8f9fa;
+        border-width: 36px;
+        margin-left: -36px;
+    }
 }
 
 /* iPads (portrait and landscape) */
@@ -17,13 +57,46 @@
       .header-text {
         font-size: 2.5rem;
     }
+
+    .navlink-arrow {
+        position: relative;
+        background:#f8f9fa;
+        border: 4px solid #f8f9fa;
+        color: #d1a2ef
+    }
+
+    .navlink-arrow:after, .navlink-arrow:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .navlink-arrow:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: #f8f9fa;
+        border-width: 30px;
+        margin-left: -30px;
+    }
+    .navlink-arrow:before {
+        border-color: rgba(194, 225, 245, 0);
+        border-top-color: #f8f9fa;
+        border-width: 36px;
+        margin-left: -36px;
+    }
 }
 
 /* Smartphones (portrait and landscape) */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
-        .header-text {
+    .header-text {
         font-size: 2.5rem;
     }
 
+    .navlink-arrow {
+        color: #d1a2ef     
+    }
 }
