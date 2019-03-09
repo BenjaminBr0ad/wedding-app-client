@@ -13,6 +13,10 @@
     text-decoration: none;
 }
 
+.navbar-toggler {
+    font-size: 10px;
+}
+
 
 /* Desktops & Laptops */
 @media only screen  and (min-width : 1224px) {

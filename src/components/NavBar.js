@@ -58,7 +58,7 @@ class NavBar extends Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarToggler onClick={this.toggle} />
+                    <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar className="text-center mx-auto">
                         <Nav className="mx-auto" navbar>
                             {
