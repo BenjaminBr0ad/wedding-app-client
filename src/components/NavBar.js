@@ -4,7 +4,16 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
 import Home from './Home'
+
+const styles = {
+    root: {
+        flexGrow: 1,
+        justify: 'center'
+    },
+}
 
 function TabContainer(props) {
     return (
@@ -32,12 +41,26 @@ class NavBar extends Component {
             <div>
                 <AppBar position='static'>
                     <Tabs variant='fullWidth' value={value} centered={true} onChange={this.handleChange}>
-                        <Tab label="Home" />                        
-                        <Tab label="Event Information" />
-                        <Tab label="Venue Information" />
-                        <Tab label="Lodging & Travel Information" />
-                        <Tab label="Registry" />
-                        <Tab label="Photos" />
+                        <Grid container spacing={24} className={this.props.classes.root}>
+                            <Grid item xs={12}>
+                                <Tab label="Home" />                        
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Tab label="Event Information" />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Tab label="Venue Information" />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Tab label="Lodging & Travel Information" />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Tab label="Registry" />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Tab label="Photos" />
+                            </Grid>
+                        </Grid>
 
                     </Tabs>
                 </AppBar>
@@ -56,4 +79,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar
+export default withStyles(styles)(NavBar)
