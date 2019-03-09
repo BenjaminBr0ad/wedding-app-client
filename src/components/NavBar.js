@@ -1,14 +1,40 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import '../App.css'
 import {
     Collapse,
     Navbar,
     NavbarToggler,
     Nav,
     NavItem,
-    NavLink
 } from 'reactstrap'
 
+const linkInfo = [
+    {
+        path: '/',
+        text: 'Home'
+    },
+    {
+        path: '/event',
+        text: 'Event Information'
+    },
+    {
+        path: '/venue',
+        text: 'Venue Information'
+    },
+    {
+        path: '/lodging',
+        text: 'Lodging & Travel Information'
+    },
+    {
+        path: '/registry',
+        text: 'Registry'
+    },
+    {
+        path: '/photos',
+        text: 'Photos'
+    }
+]
 
 class NavBar extends Component {
 
@@ -29,39 +55,26 @@ class NavBar extends Component {
 
     render() {
 
-        const {
-            changePage
-        } = this.props
-
         return (
             <div>
-                <div>
-                    <Navbar color="light" light expand="md">
-                        <NavbarToggler onClick={this.toggle} />
-                        <Collapse isOpen={this.state.isOpen} navbar className="text-center mx-auto">
-                            <Nav className="mx-auto" navbar>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(0)}>Home</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(1)}>Event Information</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(2)}>Venue Information</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(3)}>Lodging & Travel Information</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(4)}>Registry</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(5)}>Photos</NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                    </Navbar>
-                </div>
+                <Navbar color="light" light expand="md">
+                    <NavbarToggler onClick={this.toggle} />
+                    <Collapse isOpen={this.state.isOpen} navbar className="text-center mx-auto">
+                        <Nav className="mx-auto" navbar>
+                            {
+                                linkInfo.map((link,i) => {
+                                    return (
+                                        <NavItem key={i} className="px-lg-4 px-md-2 px-xl-5">
+                                            <NavLink exact to={link.path} className="navlink" activeClassName="navlink-arrow">
+                                                {link.text}
+                                            </NavLink>
+                                        </NavItem>
+                                    )
+                                })
+                            }
+                        </Nav>
+                    </Collapse>
+                </Navbar>
             </div>
         )
 

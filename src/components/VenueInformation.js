@@ -6,7 +6,7 @@ class VenueInformation extends Component {
 
         return (
             <div>
-                EenueInformation
+                VenueInformation
             </div>
         )
 
