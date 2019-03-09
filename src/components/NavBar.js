@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { Route } from 'react-router-dom'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -58,7 +56,4 @@ class NavBar extends Component {
     }
 }
 
-export default connect(
-    null,
-    null
-)(NavBar)
+export default NavBar
