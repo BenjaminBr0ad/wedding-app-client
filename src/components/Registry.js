@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 
-class Header extends Component {
+class Registry extends Component {
 
     render() {
 
         return (
-
             <div>
-                Benjamin & Kody
+                Registry
             </div>
         )
 
     }
-
 }
 
-export default Header
+export default Registry

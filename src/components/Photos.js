@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 
-class Header extends Component {
+class Photos extends Component {
 
     render() {
 
         return (
-
             <div>
-                Benjamin & Kody
+                Photos
             </div>
         )
 
     }
-
 }
 
-export default Header
+export default Photos
