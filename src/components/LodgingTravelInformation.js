@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 
-class Header extends Component {
+class LodgingTravelInformation extends Component {
 
     render() {
 
         return (
-
             <div>
-                Benjamin & Kody
+                LodgingTravelInformation
             </div>
         )
 
     }
-
 }
 
-export default Header
+export default LodgingTravelInformation

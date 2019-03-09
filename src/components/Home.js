@@ -9,10 +9,13 @@ const homePhoto = {
 class Home extends Component {
 
     render() {
+
         return (
             <img className='home-photo' alt='Ben & Kody' style={homePhoto} src={photo}></img>
         )
+
     }
+
 }
 
 export default Home
