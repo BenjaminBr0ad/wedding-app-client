@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../App.css'
 
 class Header extends Component {
 
@@ -7,7 +8,7 @@ class Header extends Component {
         return (
 
             <div>
-                Benjamin & Kody
+                <h1 className="text-center cursive header-text">Benjamin & Kody</h1>
             </div>
         )
 

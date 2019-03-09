@@ -1,0 +1,29 @@
+.cursive {
+    font-family: 'Srisakdi', cursive;
+}
+
+
+/* Desktops & Laptops */
+@media only screen  and (min-width : 1224px) {
+
+    .header-text {
+        font-size: 5rem;
+    }
+
+}
+
+/* iPads (portrait and landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+      .header-text {
+        font-size: 2.5rem;
+    }
+}
+
+/* Smartphones (portrait and landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+        .header-text {
+        font-size: 2.5rem;
+    }
+
+}

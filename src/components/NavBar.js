@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import '../App.css'
 import {
     Collapse,
     Navbar,
     NavbarToggler,
     Nav,
     NavItem,
-    NavLink
 } from 'reactstrap'
 
 
@@ -29,10 +29,6 @@ class NavBar extends Component {
 
     render() {
 
-        const {
-            changePage
-        } = this.props
-
         return (
             <div>
                 <div>
@@ -40,23 +36,35 @@ class NavBar extends Component {
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar className="text-center mx-auto">
                             <Nav className="mx-auto" navbar>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(0)}>Home</NavLink>
+                                <NavItem className="px-lg-4 px-md-2 px-xl-5">
+                                    <NavLink to="/">
+                                        Home
+                                    </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(1)}>Event Information</NavLink>
+                                <NavItem className="px-lg-4 px-md-2 px-xl-5">
+                                    <NavLink to="/event">
+                                        Event Information
+                                    </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(2)}>Venue Information</NavLink>
+                                <NavItem className="px-lg-4 px-md-2 px-xl-5">
+                                    <NavLink to="/venue">
+                                        Venue Information
+                                    </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(3)}>Lodging & Travel Information</NavLink>
+                                <NavItem className="px-lg-4 px-md-2 px-xl-5">
+                                    <NavLink to="/lodging">
+                                        Lodging & Travel Information
+                                    </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(4)}>Registry</NavLink>
+                                <NavItem className="px-lg-4 px-md-2 px-xl-5">
+                                    <NavLink to="/registry">
+                                        Registry
+                                    </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink onClick={() => changePage(5)}>Photos</NavLink>
+                                <NavItem className="px-lg-4 px-md-2 px-xl-5">
+                                    <NavLink to="/photos">
+                                        Photos
+                                    </NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>
