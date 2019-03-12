@@ -27,6 +27,10 @@
     .h3-header-text {
         font-size: 2rem;
     }
+
+    .map-container {
+        height: 75vh;
+    }
     
     .navlink-arrow {
         position: relative;
@@ -68,6 +72,14 @@
     
     .h3-header-text {
         font-size: 1.5rem;
+    }
+
+    .map-container {
+        height: 70vh;
+    }
+
+    .navlink {
+        font-size: 0.80rem;
     }
 
     .navlink-arrow {
@@ -112,7 +124,15 @@
         font-size: 1rem;
     }
 
+    .navlink {
+        font-size: 1.2rem;
+    }
+
     .navlink-arrow {
         color: #d1a2ef     
+    }
+
+    .map-container {
+        height: 50vh;
     }
 }

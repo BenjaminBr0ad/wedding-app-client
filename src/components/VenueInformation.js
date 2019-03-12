@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
-import { GoogleMap, Marker } from "react-google-maps"
+import {
+    Row,
+    Col
+} from 'reactstrap'
+import Map from './Map'
 
 class VenueInformation extends Component {
 
@@ -7,7 +11,11 @@ class VenueInformation extends Component {
 
         return (
             <div>
-                VenueInformation
+                <Row>
+                    <Col lg={{size: 6, offset:6}} md={{size: 6, offset: 6}} sm={{size: 12}} className="map-container">
+                        <Map />
+                    </Col>
+                </Row>
             </div>
         )
 
