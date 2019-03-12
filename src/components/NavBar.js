@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import { slide as Menu } from 'react-burger-menu'
 import {
     Collapse,
     Navbar,
@@ -56,6 +55,7 @@ class NavBar extends Component {
     render() {
 
         return (
+
             <div>
                 <Navbar color="light" light expand="md">
                     <NavbarToggler onClick={this.toggle}/>
@@ -76,6 +76,7 @@ class NavBar extends Component {
                     </Collapse>
                 </Navbar>
             </div>
+            
         )
 
     }
