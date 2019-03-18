@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
+import GoogleMapReact from 'google-map-react'
 
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -10,14 +10,14 @@ class Map extends Component {
             lng: -104.884323
         },
         zoom: 11
-    };
+    }
 
     render() {
+
         return (
             // Important! Always set the container height explicitly
-     
                 <GoogleMapReact
-                    bootstrapURLKeys={{ key: 'AIzaSyABMbM4YJsz8RlL3YhkH50YRVheJth_1Fs' }}
+                    bootstrapURLKeys={{ key: '' }}
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
                 >
@@ -27,8 +27,10 @@ class Map extends Component {
                         text={'Wedding Venue'}
                     /> */}
                 </GoogleMapReact>
-        );
+        )
+
     }
+
 }
 
-export default Map;
+export default Map
