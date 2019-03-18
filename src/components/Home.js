@@ -13,9 +13,11 @@ class Home extends Component {
     render() {
     
         return (
+
             <div className="carousel-container">
                 <Carousel/>
             </div>
+            
         )
 
     }

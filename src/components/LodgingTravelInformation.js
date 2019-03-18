@@ -5,9 +5,11 @@ class LodgingTravelInformation extends Component {
     render() {
 
         return (
+
             <div>
                 LodgingTravelInformation
             </div>
+            
         )
 
     }

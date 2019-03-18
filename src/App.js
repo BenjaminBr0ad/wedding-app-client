@@ -15,6 +15,7 @@ class App extends Component {
   render() {
 
     return (
+
       <div>
           <Header />
           <NavBar />
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/registry" component={Registry} />
           <Route path="/photos" component={Photos} />
       </div>
+      
     )
 
   }
